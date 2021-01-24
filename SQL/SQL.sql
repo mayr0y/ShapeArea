@@ -5,7 +5,7 @@ CREATE TABLE Category (Id INT PRIMARY KEY, name VARCHAR(20));
 INSERT INTO Category VALUE (1, 'Phone'), (2, 'Laptop'), (3, 'Apple product');
 
 CREATE TABLE ProductCategory (Id_Product INT, Id_Category INT,
-							FOREIGN KEY (Id_Product) REFERENCES Product(Id),
+			    FOREIGN KEY (Id_Product) REFERENCES Product(Id),
                             FOREIGN KEY (Id_Category) REFERENCES Category(Id),
                             PRIMARY KEY(Id_Product, Id_Category));
 
